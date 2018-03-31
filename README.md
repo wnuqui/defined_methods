@@ -1,6 +1,6 @@
 # DefinedMethods
 
-`DefinedMethods` is a utility module that returns methods defined in a given object. These methods are not from included or extended modules. These methods are not also from parent objects. By object, it means either a `class` or `module`.
+`DefinedMethods` is a utility module that returns **methods defined in a given object**. These methods are NOT from included or extended modules. These methods are also NOT from parent objects. By object, it means either a `class` or `module`.
 
 ## Installation
 
