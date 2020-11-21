@@ -1,4 +1,4 @@
-# DefinedMethods [![Build Status](https://wnuqui.semaphoreci.com/badges/defined_methods/branches/master.svg?style=shields)](https://wnuqui.semaphoreci.com/projects/defined_methods)
+# DefinedMethods [![Build Status](https://wnuqui.semaphoreci.com/badges/defined_methods/branches/master.svg?style=shields)](https://wnuqui.semaphoreci.com/projects/defined_methods) [![Test Coverage](https://api.codeclimate.com/v1/badges/e6e5eb81d01758314813/test_coverage)](https://codeclimate.com/github/wnuqui/defined_methods/test_coverage)
 
 `DefinedMethods` is a utility module that returns **methods defined in a given object**. These methods are NOT from included or extended modules. These methods are also NOT from parent objects. By object, it means either a `class` or `module`.
 
