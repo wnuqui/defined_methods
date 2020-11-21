@@ -13,6 +13,14 @@ blocks:
             - checkout
             - sem-version ruby 2.6.5
             - cache restore
+            - 'curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter'
             - bundle install --path vendor/bundle
             - cache store
+            - chmod +x ./cc-test-reporter
+            - ./cc-test-reporter before-build
             - bundle exec rspec
+            - exitcode=$?
+            - ./cc-test-reporter after-build --exit-code $exitcode
+      secrets:
+        - name: DefinedMethods CC_TEST_REPORTER_ID
+    dependencies: []
