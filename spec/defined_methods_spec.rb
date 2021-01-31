@@ -10,11 +10,18 @@ RSpec.describe DefinedMethods do
       end
     end
     describe '.fqmn' do
-      it 'returns fully qualified method name' do
+      it 'returns name for singleton method' do
         group = { singleton: true, object_name: 'Arithmeter'}
         method_name = 'add'
-        fqmn = DefinedMethods::fqmn(group, method_name)
+        fqmn = DefinedMethods::fqmn(group[:object_name], method_name, group[:singleton])
         expect(fqmn).to eq('Arithmeter.add')
+      end
+
+      it 'returns name for not singleton method' do
+        group = { singleton: false, object_name: 'Arithmeter'}
+        method_name = 'add'
+        fqmn = DefinedMethods::fqmn(group[:object_name], method_name, group[:singleton])
+        expect(fqmn).to eq('Arithmeter#add')
       end
     end
   end
