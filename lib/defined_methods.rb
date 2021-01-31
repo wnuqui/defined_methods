@@ -15,9 +15,9 @@ module DefinedMethods
       ]
     end
 
-    def fqmn(group, method)
-      separator = group[:singleton] ? '.' : '#'
-      group[:object_name] + separator + method.to_s
+    def fqmn(object_name, method, singleton)
+      separator = singleton ? '.' : '#'
+      object_name + separator + method.to_s
     end
   end
 end
